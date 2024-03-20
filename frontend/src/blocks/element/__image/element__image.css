@@ -1,0 +1,16 @@
+.element__image{
+    width: 100vw;
+    height: 100vh;
+    max-width: 17.625rem;
+    max-height: 17.625rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+.element__image-hover{
+    width: 100vw;
+    height: 100vh;
+    visibility: visible;
+    opacity: 0;
+}

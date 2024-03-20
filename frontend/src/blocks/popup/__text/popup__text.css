@@ -1,0 +1,21 @@
+.popup__text{
+    width: 22.375rem;
+    height: .875rem;
+    font-family: "inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.0625rem;
+    color: #000000;
+    border: none;
+    outline: none;
+    margin: 1.25rem;
+    border-bottom: .0625rem solid #545454;
+    padding: .625rem;
+}
+@media screen and (min-width:320px)and (max-width:768px) {
+    .popup__text{
+        width: 14.875rem;
+        height: 1.0625rem;
+    }   
+}
