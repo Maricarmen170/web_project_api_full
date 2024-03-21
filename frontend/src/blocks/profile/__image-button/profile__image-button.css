@@ -1,0 +1,13 @@
+.profile_image-button{
+    cursor: pointer;
+    width: 26px;
+    height: 26px;
+    background: none;
+}
+
+@media screen and (min-width:320px)and (max-width:768px) {
+    .profile_image-button{
+        display:flex;
+        
+    }   
+}

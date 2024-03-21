@@ -1,0 +1,15 @@
+.profile__add{
+    width: 9.375rem;
+    height: 3.125rem;
+    align-self: center;
+    background-color: #000000;
+    border: 1px solid #fff;
+}
+@media screen and (min-width:320px)and (max-width:768px) {
+    .profile__add{
+        width: 17.625rem;
+        height: 3.125rem;
+        margin-top: -3.125rem;
+        /*border: .0625rem solid #FFFFFF;*/
+    }   
+}
