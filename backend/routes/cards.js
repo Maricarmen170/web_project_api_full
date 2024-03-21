@@ -14,6 +14,6 @@ const router = express.Router();
 router.get('/', getCards);
 router.post('/', auth, postCard);
 router.delete('/:_id', auth, deleteCardById);
-router.put('/:cardId/likes', auth, likeCard);
-router.delete('/:cardId/likes', auth, dislikeCard);
+router.put(':cardId/likes', auth, likeCard);
+router.delete(':cardId/likes', auth, dislikeCard);
 export default router;

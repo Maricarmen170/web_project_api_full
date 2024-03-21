@@ -93,8 +93,8 @@ class Api {
         }
     }
 
-    async removeCard(cardId, onDeleteCard,token) {
-        console.log("carId",cardId);
+    async removeCard(cardId, token) {
+
         try {
             const response = await fetch(`${this._baseUrl}/cards/${cardId}`, {
                 method: 'DELETE',
@@ -104,38 +104,6 @@ class Api {
                 },
             });
             if (response.ok) {
-                onDeleteCard();
-            } else {
-                return Promise.reject(`Error:${response.status}`);
-            }
-        } catch (error) {
-            throw new Error(`${error}`);
-        }
-    }
-    
-    
-    async changeLikeCardStatus(cardId, isLiked,token) {
-        try {
-            let response;
-            console.log("response",response);
-            if (isLiked) {
-                response = await fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-                method: 'DELETE',
-                headers: {
-                    ...this._headers,
-                    authorization: `Bearer ${token}`,
-                },
-            });
-            } else {
-                response = await fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
-                    method: 'PUT',
-                    headers: {
-                        ...this._headers,
-                        authorization: `Bearer ${token}`,
-                },
-            });
-            }
-            if (response.ok) {
                 return response.json();
             } else {
                 return Promise.reject(`Error:${response.status}`);
@@ -144,6 +112,38 @@ class Api {
             throw new Error(`${error}`);
         }
     }
+    
+
+    async changeLikeCardStatus(cardId, isLiked, token) {
+        try {
+          let response;
+          if (isLiked) {
+            response = await fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+              method: 'DELETE',
+              headers: {
+                ...this._headers,
+                authorization: `Bearer ${token}`,
+              },
+            });
+          } else {
+            response = await fetch(`${this._baseUrl}/cards/likes/${cardId}`, {
+              method: 'PUT',
+              headers: {
+                ...this._headers,
+                authorization: `Bearer ${token}`,
+              },
+            });
+          }
+          if (response.ok) {
+            return response.json();
+          } else {
+            return Promise.reject(`Error ${response.status}`);
+          }
+        } catch (error) {
+          throw new Error(`${error}`);
+        }
+      }
+
 
     async editUserAvatar(avatar, token) {
         try {

@@ -25,9 +25,9 @@ export const postCard = async (req, res) => {
 export const deleteCardById = async (req, res) => {
   try {
     const cardId = req.params._id;
-    const { user } = req.user;
+    const { _id: userId } = req.user;
     const selectedCard = await Card.findById(cardId).orFail();
-    if (selectedCard.owner.valueOf() === user._id) {
+    if (selectedCard.owner.valueOf() === userId) {
       const deletedCard = await Card.findByIdAndRemove(cardId);
       return res.send({ data: deletedCard });
     }

@@ -19,7 +19,7 @@ export const auth = async (req, res, next) => {
     }
     req.user = payload;
     next();
-    return req;
+    return req.user;
   } catch (err) {
     return res.status(403).send({ message: 'El token no es válido' });
   }
