@@ -7,6 +7,7 @@ import cards from './routes/cards.js';
 import { requestLogger, errorLogger } from './middlewares/logger.js';
 import { createUser, login } from './controllers/users.js';
 
+const { PORT = 3000 } = process.env;
 const app = express();
 
 // Middleware para analizar el cuerpo de la solicitud en formato JSON
@@ -42,6 +43,6 @@ app.get('/', (req, res) => {
   res.status(200).send({ message: 'Bienvenido a la aplicacion' });
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+app.listen(PORT, () => {
+  console.log('la aplicacion esta corriendo');
 });
