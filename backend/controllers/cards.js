@@ -79,6 +79,6 @@ export const dislikeCard = async (req, res) => {
     if (err.name === 'DocumentNotFound') {
       return res.status(404).send({ message: 'No se ha encontrado la carta' });
     }
-    return res.status(400).send({ message: 'Ha ocurrido un error en el servidor' });
+    return res.status(400).send({ message: 'holaaaa' });
   }
 };

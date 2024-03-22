@@ -60,16 +60,14 @@ useEffect(() => {
 },[token])
 
 function handleCardLike(card) {
-  console.log(card);
-  const isLiked = card.likes.some((owner) => {
-    return owner === currentUser._id
+  const isLiked = card.likes.some((id) => {
+    return id === currentUser._id
   });
-  console.log('isliked',isLiked);
-  api.changeLikeCardStatus(token, card._id, isLiked)
+  api.changeLikeCardStatus( card._id, isLiked, token)
   .then((newCard) => {
-      setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+      setCards((state) => state.map((c) => c._id === card._id ? newCard.data : c));
   })
-  .catch((err) => console.log("hola",err));
+  .catch((err) => console.log(err));
 }
 
 function handleDeleteCard(card) {

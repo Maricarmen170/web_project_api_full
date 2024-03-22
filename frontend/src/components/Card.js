@@ -12,7 +12,7 @@ const cardDeleteButtonClassName = `icon-remove ${
   isOwn ? 'icon-remove_active' : ''
 }`;
 
-const isLiked = props.likes.some(item => item._id === currentUser._id);
+const isLiked = props.card.likes.some(item => item._id === currentUser._id);
 
 const cardLikeButtonClassName = `icon-like ${
   isLiked ? 'icon-like_active': ''
