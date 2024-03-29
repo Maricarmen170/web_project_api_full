@@ -62,8 +62,8 @@ export const createUser = async (req, res) => {
 };
 
 export const login = async (req, res) => {
-  const { email, password } = req.body;
   try {
+    const { email, password } = req.body;
     const user = await User.findUserWithCredentials(email, password);
 
     if (user && (user instanceof Error || user === 'email o contraseña incorrectas')) {
