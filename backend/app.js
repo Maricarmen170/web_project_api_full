@@ -21,9 +21,9 @@ const corsOptions = {
   origin: [
     'http://localhost:3000',
     'http://localhost:3001',
-    'https://api.mariliba.mooo.com',
-    'https://mariliba.mooo.com',
-    'https://www.mariliba.mooo.com',
+    'https://api.apifull.mooo.com',
+    'https://apifull.mooo.com',
+    'https://www.apifull.mooo.com',
   ],
   credentials: true, // Para permitir cookies de sesión en las solicitudes entre dominios
   allowedHeaders: 'Content-Type, Authorization', // Para permitir el token de autorización en las solicitudes

@@ -1,8 +1,0 @@
-.icon-like_active {
-    position: absolute;
-    background-image: url(../../../images/__iconlikeactive.png);
-}
-
-.icon-like_active:hover {
-    opacity: 1;
-}
