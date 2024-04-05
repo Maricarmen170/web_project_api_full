@@ -1,1 +1,1 @@
-export const BASE_URL = "https://www.mariliba.mooo.com";
+export const BASE_URL = "https://mariliba.mooo.com";

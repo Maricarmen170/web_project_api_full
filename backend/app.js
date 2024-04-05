@@ -16,6 +16,23 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.options('*', cors());
 
+// Opciones de CORS para permitir solicitudes de ciertos orígenes
+const corsOptions = {
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://api.alrededorusa.mooo.com',
+    'https://alrededorusa.mooo.com',
+    'https://www.alrededorusa.mooo.com',
+  ],
+  credentials: true, // Para permitir cookies de sesión en las solicitudes entre dominios
+  allowedHeaders: 'Content-Type, Authorization', // Para permitir el token de autorización en las solicitudes
+  allowedMethods: 'GET, POST, PATCH, PUT, DELETE, OPTIONS', // Para permitir los métodos HTTP
+};
+
+// eslint-disable-next-line no-undef
+app.use(cors(corsOptions));
+
 // Conexión a MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/aroundb')
   .then(() => {
