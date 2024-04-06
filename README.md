@@ -5,6 +5,7 @@ Este repositorio aprovecha los últimos avances en React utilizando Create React
 Tecnologías utilizadas 💻
 
 # Interfaz
+
 JavaScript/JSX
 Reaccionar
 Reaccionar componentes
@@ -17,6 +18,7 @@ paquete web
 MNP
 
 # backend
+
 Nodo.js
 expreso.js
 Base de datos
@@ -24,3 +26,12 @@ MongoDB
 Mangosta
 Nube de Google
 Acceso a la aplicación
+
+# Uso
+
+Usar este proyecto es bastante sencillo. Sigue estos pasos para comenzar:
+
+Abre la aplicación en tu navegador web y ve a https://wwww.apifull.mooo.com.
+Inicia sesión con tu cuenta de usuario.
+Explora las diferentes secciones de la aplicación.
+Crea, edita y elimina tarjetas.
