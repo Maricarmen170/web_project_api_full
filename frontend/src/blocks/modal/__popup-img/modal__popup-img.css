@@ -1,0 +1,43 @@
+/*.modal__popup-img {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    top: 1px;
+    left: 1px;
+    margin: auto 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+}*/
+
+.modal__popup-img {
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+
+/*.modal__popup-img {
+    position: relative;
+    display: none;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;
+    flex-direction: column;
+}
+
+@media screen and (min-width:320px)and (max-width:768px) {
+    .modal__popup-img {
+        width: 320px;
+        align-items: center;
+    }
+}*/

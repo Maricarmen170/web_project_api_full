@@ -1,0 +1,22 @@
+.header__nav-bar {
+    display: flex;
+    gap: 23px;
+    align-items: baseline;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 320px) and (max-width: 898px) {
+    .header__nav-bar {
+        position: absolute;
+        left: 0;
+        top: -169px;
+        right: 0;
+        height: 0;
+        border-bottom: 1px solid #545454;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        gap: 18px;
+    }
+}
