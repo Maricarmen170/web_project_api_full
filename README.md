@@ -31,7 +31,7 @@ Acceso a la aplicación
 
 Usar este proyecto es bastante sencillo. Sigue estos pasos para comenzar:
 
-Abre la aplicación en tu navegador web y ve a https://wwww.apifull.mooo.com.
+Abre la aplicación en tu navegador web y ve a https://www.apifull.mooo.com.
 Inicia sesión con tu cuenta de usuario.
 Explora las diferentes secciones de la aplicación.
 Crea, edita y elimina tarjetas.
